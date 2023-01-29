@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 # importing files
+=======
+>>>>>>> 9de875d (added exit command)
 import smtplib
 from winreg import QueryInfoKey
 import pyttsx3
@@ -41,7 +44,10 @@ def commands():
     r=sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening..")
+<<<<<<< HEAD
         
+=======
+>>>>>>> 9de875d (added exit command)
         r.pause_threshold=1
         audio=r.listen(source)
     try:
@@ -78,7 +84,11 @@ while True:
         songs = os.listdir(music_dir)
         print(songs)    
         os.startfile(os.path.join(music_dir, songs[0]))
+<<<<<<< HEAD
     elif 'the time' or "what is the time" in query:
+=======
+    elif 'the time' in query:
+>>>>>>> 9de875d (added exit command)
         speak("sure")
         time=datetime.datetime.now().strftime("%H:%M:%S")
         speak("The time is")
@@ -92,7 +102,10 @@ while True:
         os.startfile("C:\\Users\\inaze\\AppData\\Roaming\\Spotify\\Spotify.exe")
 
     elif 'search google for'  in query:
+<<<<<<< HEAD
         
+=======
+>>>>>>> 9de875d (added exit command)
         speak("sure")
         search_word=query.replace("search google", "")
         webbrowser.open('http://google.com/search?q=' +search_word)
@@ -102,6 +115,7 @@ while True:
         webbrowser.open("https://www.youtube.com/results?search_query=trending+songs")
 
     elif 'what is your name' in query:
+<<<<<<< HEAD
         speak("hey there nice to meet you. U can call me Elik") 
 
     elif 'what is the weather of today?'or'what is todays weather?' in query:  
@@ -109,6 +123,21 @@ while True:
         webbrowser.open('http://google.com/search?q=' +"today weather")
         
 
+=======
+        speak("hey there nice to meet you . U can call me Elik") 
+
+    elif 'what is the weather of today?'or'what is todays weather?' in query:  
+        speak("okay sure")   
+        webbrowser.open('http://google.com/search?q=' +"today's weather")
+
+    elif 'quit 'or 'shut up' in query:
+        speak("okay bye! see you soon") 
+        exit()
+          
+        
+
+
+>>>>>>> 9de875d (added exit command)
         
         
 
