@@ -1,3 +1,4 @@
+# importing files
 import smtplib
 from winreg import QueryInfoKey
 import pyttsx3
@@ -40,6 +41,7 @@ def commands():
     r=sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening..")
+        
         r.pause_threshold=1
         audio=r.listen(source)
     try:
@@ -90,6 +92,7 @@ while True:
         os.startfile("C:\\Users\\inaze\\AppData\\Roaming\\Spotify\\Spotify.exe")
 
     elif 'search google for'  in query:
+        
         speak("sure")
         search_word=query.replace("search google", "")
         webbrowser.open('http://google.com/search?q=' +search_word)
@@ -99,7 +102,7 @@ while True:
         webbrowser.open("https://www.youtube.com/results?search_query=trending+songs")
 
     elif 'what is your name' in query:
-        speak("hey there nice to meet you . U can call me Elik") 
+        speak("hey there nice to meet you. U can call me Elik") 
 
     elif 'what is the weather of today?'or'what is todays weather?' in query:  
         speak("okay sure")   
